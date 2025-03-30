@@ -7,11 +7,11 @@
     <!-- Vanilla Tailwindcss link file -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- CSS file link -->
-    <link rel="./assets/css/style.css" href="" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
-  <body class="bg-zinc-700 max-w-lg mx-auto p-5 ronded">
+  <body class="bg-zinc-700 max-w-lg mx-auto p-5">
     <div>
-      <header class="bg-indigo-500 text-white p-5">
+      <header class="bg-indigo-500 text-white p-5 ronded">
         <div class="flex items-center justify-between">
           <div>
             <h4 class="font-bold text-lg">Student Reg Form</h4>
@@ -38,108 +38,129 @@
         </div>
       </header>
       <main class="bg-white p-5 space-y-2">
+        <!-- Student Name -->
         <div>
-          <label for="">
+          <label>
             <h4 class="font-semibold">Student Full Name</h4>
             <input
               type="text"
+              id="name"
               placeholder="Enter Student Name "
-              class="bg-gray-300 px-2 py-2 rounded w-full mt-2 text-sm"
+              class="bg-gray-200 px-2 py-2 rounded w-full mt-2 text-sm outline-none"
             />
           </label>
         </div>
-        <div class="mt-">
+        <!-- Parents Name -->
+        <div>
           <label for="">
             <h4 class="font-semibold">Parents Name</h4>
             <input
               type="text"
               placeholder="Enter Parents Name "
-              class="bg-gray-300 px-2 py-2 rounded w-full mt-2 text-sm"
+              class="bg-gray-200 px-2 py-2 rounded w-full mt-2 text-sm outline-none"
             />
           </label>
         </div>
-        <div class="mt-">
+        <!-- DOB -->
+        <div>
           <label for="">
             <h4 class="font-semibold">Date of Birth</h4>
             <input
               type="date"
               placeholder="Enter Student Name "
-              class="bg-gray-300 px-2 py-2 rounded w-full mt-2 text-sm"
+              class="bg-gray-200 px-2 py-2 rounded w-full mt-2 text-sm outline-none"
             />
           </label>
         </div>
+        <!-- Gender Selection -->
         <div>
           <label for="" class="font-semibold">Gender </label>
-          <div class="flex w-full gap-4 bg-gray-300 p-2 rounded text-sm mt-2">
+          <div class="flex w-full gap-4 bg-gray-200 p-2 rounded text-sm mt-2">
             <div class="flex items-center gap-2 flex-1">
               <input type="radio" id="male" name="gender" value="Male" />
               <label for="male">Male</label>
             </div>
             <div class="flex items-center gap-2 flex-1">
               <input type="radio" id="female" name="gender" value="Female" />
-              <label for="male">Female</label>
+              <label for="female">Female</label>
             </div>
             <div class="flex items-center gap-2 flex-1">
               <input type="radio" id="others" name="gender" value="Others" />
-              <label for="male">Others</label>
+              <label for="others">Others</label>
             </div>
           </div>
         </div>
+        <!-- Major Selection -->
         <div>
-          <h4 class="font-semibold">Choose Major</h4>
+          <label for="languages" class="font-semibold">Choose Major</label>
           <select
             name="languages"
             id="languages"
-            class="bg-gray-300 px-2 py-2 rounded w-full mt-2 text-sm"
+            class="bg-gray-200 px-2 py-2 rounded w-full mt-2 text-sm"
           >
             <option value="">Select Major</option>
             <option value="medical">Medical</option>
-            <option value="agri">Agriculture</option>
+            <option value="agriculture">Agriculture</option>
             <option value="engineering">Engineering</option>
-            <option value="arts&sci">Arts & Science</option>
+            <option value="arts_sci">Arts & Science</option>
           </select>
           <!-- Department Selection -->
           <h4 class="font-semibold mt-3">Choose Department</h4>
           <select
             id="departmentSelect"
-            class="bg-gray-300 px-2 py-2 rounded w-full mt-2 text-sm"
+            class="bg-gray-200 px-2 py-2 rounded w-full mt-2 text-sm"
             disabled
           >
             <option value="">Select Department</option>
           </select>
         </div>
-        <div class="mt-">
-          <label for="">
+        <!-- Contact Number -->
+        <div>
+          <label>
             <h4 class="font-semibold">Phone No</h4>
             <input
               type="number"
               placeholder="Enter Phone Number"
-              class="bg-gray-300 px-2 py-2 rounded w-full mt-2 text-sm"
+              class="bg-gray-200 px-2 py-2 rounded w-full mt-2 text-sm outline-none"
             />
           </label>
         </div>
-        <div class="mt-">
-          <label for="">
+        <!-- Email  -->
+        <div>
+          <label>
             <h4 class="font-semibold">Email</h4>
             <input
               type="email"
               placeholder="Enter Email ID"
-              class="bg-gray-300 px-2 py-2 rounded w-full mt-2 text-sm"
+              class="bg-gray-200 px-2 py-2 rounded w-full mt-2 text-sm outline-none"
             />
           </label>
         </div>
         <div>
           <div class="text-center">
-            <label for="" class="text-sm text-gray-600 mt-2"
+            <label for="" class="text-xs text-gray-600 mt-2"
               >If you done with Filling the form Click on the Submit Button Here
               !</label
             >
           </div>
           <button
-            class="bg-orange-500 p-2 rounded text-white font-bold text-center mt-4 w-full"
+            class="bg-orange-500 p-2 rounded text-white font-bold text-center mt-4 w-full hover:bg-orange-600 outline-none"
+            id="registerBtn"
           >
             Submit
           </button>
+        </div>
+        <!-- Display Registered User Details -->
+        <div
+          id="result"
+          class="p-4 mt-4 max-w-lg mx-auto bg-green-300 rounded shadow hidden space-y-2 text-sm"
+        >
+          <h3 class="font-bold text-sm">Registration Successful 🎉</h3>
+          <p><strong>Reg No:</strong> <span id="regNo"></span></p>
+          <p><strong>Name:</strong> <span id="regName"></span></p>
+          <p><strong>Gender:</strong> <span id="regGender"></span></p>
+          <p><strong>Major:</strong> <span id="regMajor"></span></p>
+          <p><strong>Department:</strong> <span id="regDept"></span></p>
         </div>
       </main>
     </div>
