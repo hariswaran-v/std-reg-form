@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student | Registration | Form</title>
+    <!-- Vanilla Tailwindcss link file -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- CSS file link -->
+    <link rel="./assets/css/style.css" href="" />
+  </head>
+  <body class="bg-zinc-700 max-w-lg mx-auto p-5 ronded">
+    <div>
+      <header class="bg-indigo-500 text-white p-5">
+        <div class="flex items-center justify-between">
+          <div>
+            <h4 class="font-bold text-lg">Student Reg Form</h4>
+            <p class="text-gray-200">Enter the Details below the Form</p>
+          </div>
+          <div class="bg-orange-500 p-2 rounded-full">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="32"
+              height="32"
+              viewBox="0 0 32 32"
+            >
+              <!-- Icon from Carbon by IBM - undefined -->
+              <path
+                fill="currentColor"
+                d="M26 30h-2v-3a5.006 5.006 0 0 0-5-5h-6a5.006 5.006 0 0 0-5 5v3H6v-3a7.01 7.01 0 0 1 7-7h6a7.01 7.01 0 0 1 7 7zM5 6a1 1 0 0 0-1 1v9h2V7a1 1 0 0 0-1-1"
+              />
+              <path
+                fill="currentColor"
+                d="M4 2v2h5v7a7 7 0 0 0 14 0V4h5V2Zm7 2h10v3H11Zm5 12a5 5 0 0 1-5-5V9h10v2a5 5 0 0 1-5 5"
+              />
+            </svg>
+          </div>
+        </div>
+      </header>
+      <main class="bg-white p-5 space-y-2">
+        <div>
+          <label for="">
+            <h4 class="font-semibold">Student Full Name</h4>
+            <input
+              type="text"
+              placeholder="Enter Student Name "
+              class="bg-gray-300 px-2 py-2 rounded w-full mt-2 text-sm"
+            />
+          </label>
+        </div>
+        <div class="mt-">
+          <label for="">
+            <h4 class="font-semibold">Parents Name</h4>
+            <input
+              type="text"
+              placeholder="Enter Parents Name "
+              class="bg-gray-300 px-2 py-2 rounded w-full mt-2 text-sm"
+            />
+          </label>
+        </div>
+        <div class="mt-">
+          <label for="">
+            <h4 class="font-semibold">Date of Birth</h4>
+            <input
+              type="date"
+              placeholder="Enter Student Name "
+              class="bg-gray-300 px-2 py-2 rounded w-full mt-2 text-sm"
+            />
+          </label>
+        </div>
+        <div>
+          <label for="" class="font-semibold">Gender </label>
+          <div class="flex w-full gap-4 bg-gray-300 p-2 rounded text-sm mt-2">
+            <div class="flex items-center gap-2 flex-1">
+              <input type="radio" id="male" name="gender" value="Male" />
+              <label for="male">Male</label>
+            </div>
+            <div class="flex items-center gap-2 flex-1">
+              <input type="radio" id="female" name="gender" value="Female" />
+              <label for="male">Female</label>
+            </div>
+            <div class="flex items-center gap-2 flex-1">
+              <input type="radio" id="others" name="gender" value="Others" />
+              <label for="male">Others</label>
+            </div>
+          </div>
+        </div>
+        <div>
+          <h4 class="font-semibold">Choose Major</h4>
+          <select
+            name="languages"
+            id="languages"
+            class="bg-gray-300 px-2 py-2 rounded w-full mt-2 text-sm"
+          >
+            <option value="">Select Major</option>
+            <option value="medical">Medical</option>
+            <option value="agri">Agriculture</option>
+            <option value="engineering">Engineering</option>
+            <option value="arts&sci">Arts & Science</option>
+          </select>
+          <!-- Department Selection -->
+          <h4 class="font-semibold mt-3">Choose Department</h4>
+          <select
+            id="departmentSelect"
+            class="bg-gray-300 px-2 py-2 rounded w-full mt-2 text-sm"
+            disabled
+          >
+            <option value="">Select Department</option>
+          </select>
+        </div>
+        <div class="mt-">
+          <label for="">
+            <h4 class="font-semibold">Phone No</h4>
+            <input
+              type="number"
+              placeholder="Enter Phone Number"
+              class="bg-gray-300 px-2 py-2 rounded w-full mt-2 text-sm"
+            />
+          </label>
+        </div>
+        <div class="mt-">
+          <label for="">
+            <h4 class="font-semibold">Email</h4>
+            <input
+              type="email"
+              placeholder="Enter Email ID"
+              class="bg-gray-300 px-2 py-2 rounded w-full mt-2 text-sm"
+            />
+          </label>
+        </div>
+        <div>
+          <div class="text-center">
+            <label for="" class="text-sm text-gray-600 mt-2"
+              >If you done with Filling the form Click on the Submit Button Here
+              !</label
+            >
+          </div>
+          <button
+            class="bg-orange-500 p-2 rounded text-white font-bold text-center mt-4 w-full"
+          >
+            Submit
+          </button>
+        </div>
+      </main>
+    </div>
+
+    <!-- JS File link -->
+    <script src="./assets/js/main.js"></script>
+  </body>
+</html>
